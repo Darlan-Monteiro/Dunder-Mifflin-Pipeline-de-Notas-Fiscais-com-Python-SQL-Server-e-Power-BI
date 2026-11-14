@@ -9,7 +9,8 @@ Projeto de ponta a ponta que simula o processamento de notas fiscais eletrônica
 
 **Painel online:** [abrir o dashboard no Power BI](https://app.powerbi.com/view?r=eyJrIjoiZDFkOWEyZjYtOWRiNi00Mzg2LTg0NzMtYWJiYzY2YmU0OGM3IiwidCI6IjY1OWNlMmI4LTA3MTQtNDE5OC04YzM4LWRjOWI2MGFhYmI1NyJ9)
 
-![Dashboard Dunder Mifflin](docs/dashboard.png)
+![Dashboard Dunder Mifflin](docs/dashboard.png)<img width="1253" height="717" alt="dashboard" src="https://github.com/user-attachments/assets/e49371f0-1ea7-4f99-a5ae-e8483d430f71" />
+
 
 > Projeto de portfólio feito por fã. Todas as empresas, pessoas, CNPJs e valores são **fictícios**. Dunder Mifflin e The Office pertencem aos seus respectivos detentores de direitos, e este projeto não tem qualquer vínculo com eles.
 

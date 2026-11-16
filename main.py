@@ -15,14 +15,13 @@ string_conexao = (
     f"Trusted_Connection=yes;"
 )
 
-print(f"Conectando ao SQL Server no banco '{banco_dados}'...")
+print(f"Conectando ao SQL Server no banco '{banco_dados}'")
 conn = pyodbc.connect(string_conexao)
 cursor = conn.cursor()
 
 # bloco para criar a tabela Faturamento_NFs caso ela não exista
 cursor.execute("SELECT DISTINCT Nome_Arquivo FROM Faturamento_NFs")
 arquivos_ja_processados = [linha[0] for linha in cursor.fetchall()]
-print(f"-> Encontrados {len(arquivos_ja_processados)} ficheiros já registados no Banco de Dados.")
 
 # blocos para listar os arquivos PDF na pasta e identificar os novos
 todos_arquivos_pasta = [f for f in os.listdir(pasta_pdfs) if f.endswith(".pdf")]
@@ -31,13 +30,13 @@ arquivos_novos = [f for f in todos_arquivos_pasta if f not in arquivos_ja_proces
 if not arquivos_novos:
     print("Nenhuma nota fiscal nova encontrada. O Banco de Dados já está atualizado.")
 else:
-    print(f"A processar {len(arquivos_novos)} novos PDFs. Aguarde...")
+    print(f"Processando {len(arquivos_novos)} novos PDFs. Aguarde.")
     
     caminhos_novos_pdfs = [os.path.join(pasta_pdfs, f) for f in arquivos_novos]
     dados_novos = extrair_dados_nfs(caminhos_novos_pdfs)
     
     if dados_novos:
-        print("Injetando os novos dados no SQL Server...")
+        print("Inserindo os novos dados no SQL Server")
         
         # bloco SQL para inserir os dados extraídos na tabela Faturamento_NFs       
         sql_insert = """

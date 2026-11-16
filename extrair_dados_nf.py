@@ -181,7 +181,7 @@ def extrair_dados_nfs(lista_caminhos_pdfs):
                 "Peso Bruto (KG)": peso_bruto,
                 "Peso Líquido (KG)": peso_liquido,
                 
-                # DADOS DO PRODUTO (NÍVEL DO ITEM)
+                # DADOS DO PRODUTO
                 "Código do Produto": codigo_prod,
                 "Descrição do Produto": descricao_prod,
                 "NCM/SH": ncm,

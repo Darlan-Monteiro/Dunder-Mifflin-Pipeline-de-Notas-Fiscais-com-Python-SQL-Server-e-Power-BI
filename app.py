@@ -45,7 +45,7 @@ transportadoras = [
 data_base = datetime(2026, 1, 1)
 total_notas_geradas = 250
 
-print(f"Gerando NFs, aguarde...")
+print(f"Gerando NFs, aguarde.")
 # loop para gerar as notas fiscais
 for i in range(1, total_notas_geradas + 1):
     cliente = random.choice(clientes)
@@ -172,4 +172,4 @@ for i in range(1, total_notas_geradas + 1):
     danfe = Danfe(xml=xml_content, config=config)
     danfe.output(caminho_pdf)
 
-print(f"Todas as notas foram geradas na pasta '{pasta_destino}'!")
+print(f"Todas as notas foram geradas na pasta '{pasta_destino}'")
